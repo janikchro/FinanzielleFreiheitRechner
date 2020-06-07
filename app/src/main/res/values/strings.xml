@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Finanzielle Freiheit Rechner</string>
+    <string name="tvAusgabeEins">Berechne ab wann Du deinen Lebensstandard nur aus Zinsen bestreiten kannst!</string>
+    <string name="tvSparbetrag">mtl. Sparbetrag:</string>
+    <string name="tvDepotwert" translatable="false">Depotwert:</string>
+    <string name="tvAusgaben">mtl. Ausgaben:</string>
+    <string name="tvAbgeltungssteuer">Abgeltungssteuersatz:</string>
+    <string name="tvZinssatz">Zinssatz:</string>
+    <string name="tvAusgabeZwei" translatable="false"> </string>
+    <string name="tvRentenbeginn">Finanziell frei in </string>
+    <string name="tvRentenbeginnResult" translatable="false">Value</string>
+    <string name="tvEndkapital">Das benötigte Kapital beträgt:</string>
+    <string name="tvEndkapitalResult" translatable="false">Value</string>
+    <string name="buCalc">Berechnen</string>
+    <string name="tvTest">100</string>
+    <string name="title_activity_main3" translatable="false">Main3Activity</string>
+    <string name="title_home" translatable="false">Home</string>
+    <string name="title_dashboard" translatable="false">Dashboard</string>
+    <string name="title_notifications" translatable="false">Notifications</string>
+    <string name="intro_heading">Was ist finanzielle Freiheit?</string>
+    <string name="intro_text">Finanzielle Freiheit ist ein großer Begriff und bedeutet für jeden etwas anderes.\n\nFür manche ist finanzielle Freiheit wenn sie sich allen Konsum leisten können den sie sich wünschen wie
+        beispielsweise einen Sportwagen. \nFür die andere Gruppe, und auf diese zielt die App ab, bedeutet finanzielle Freiheit,
+        irgendwann den Lebensstandard rein aus Zinserträgen bestreiten zu können.\nHierfür gibt es ebenfalls verschiedene Ansätze.
+        Hier werden zwei Methoden vorgestellt, zum einen die Ewige Rente also einen konstanten monatlicher Zinsertrag basierend auf einem ebenfalls konstanten Kapitalstock, sowie die zweite Methode bei der monatliche Zinsen sowie ein Teil des Kapitalsstocks ausgezahlt werden so dass du nach einer bestimmten Rentenzeit dein Kapital aufgebraucht hast
+        \nDarüber hinaus gibt es die 4%-Regel welche besagt, dass du aus einem Aktien- und Anleihenportoflio jährlich 4% des anfänglichen Wertes entnehmen kannst ohne innerhalb von 30 Jahren das gesamte Kapital aufgebraucht zu haben.
+        Da diese Regel jedoch bereits 20 Jahre alt ist gilt diese Faustformel nur als grobe Orientierung.
+        \n\nBerechne jetzt mit dieser App wann du nicht mehr arbeiten musst - entweder mit oder ohne Kapitalverzehr. </string>
+    <string name="ohne_heading">Finanzielle Freiheit ohne Kapitalverzehr</string>
+    <string name="ohne_text">In Deutschland gibt es mehr als zwei Millionen Millionäre die vermutlich nicht mehr Arbeiten müssten und trotzdem äußerst komfortabel Leben und den großteil ihres Geldes an die Kinder vererben können.
+        Je nach deinen Ausgaben musst du dafür gar kein Millionär sein! \nBerechne jetzt wieviel du monatlich sparen musst um dieses Ziel zu
+        erreichen. \nDer finanzielle Freiheit Rechner mit ewiger Auszahlung berechnet deinen Zinsertrag basierend auf deinem monatlichen
+        Sparintervall mit vorschüssiger Einzahlung und einer monatlichen Zinsperiode. Du kannst, basierend auf deiner Anlageentscheidung, selbst entscheiden ob
+        die Abgeltungssteuer jedes Jahr auf die Zinsen fällig wird oder erst wenn deine finanzielle Freiheit erreicht ist. Investierst du beispielsweise in P2P-Kredite
+        und bekommst auch in der Ansparzeit Zinsen ausgezahlt wird jährlich Abgeltungssteuer fällig. Investierst du jedoch in ETFs wird lediglich auf die Dividende bzw.
+        beim Verkauf der Anteile Abgeltungssteuer fällig. In diesem Fall wird die Abgeltungssteuer fällig wenn du deine Anteile stückweise verkaufst um deine monatlichen
+        Ausgaben zu decken. Die Abgeltungssteuer auf Dividende wird in diesem Rechner nicht berücksichtigt. </string>
+    <string name="mit_heading">Finanzielle Freiheit mit Kapitalverzehr</string>
+    <string name="mit_text">kommt bald zur App hinzu.</string>
+    <string name="info_heading">Disclaimer</string>
+    <string name="info_text">Die Berechnungen mit dieser App sind lediglich überschlägig und sollen nur eine grobe Orientierung auf dem Weg zur finanziellen Freiheit bieten. Für genauere Berechnungen muss die persönliche Steuerliche Situation und andere Rahmenbedingungen berücksichtigt werden. Aus diesem Grund ist ein Besuch beim Steuer- oder Anlageberater unvermeidlich. In dieser App werden keine Anlageempfehlungen gegeben.</string>
+    <string name="tvAbgeltungssteuer_flag">Fälligkeit: </string>
+    <string name="tvFlag">jährlich</string>
+    <string name="tvEuro">€</string>
+    <string name="tvProzent">%</string>
+</resources>

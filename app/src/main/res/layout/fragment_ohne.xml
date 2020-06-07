@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.calc.finanziellefreiheitrechner.ohneFragment">
+
+    <TextView
+        android:id="@+id/tvEins"
+        style="@style/tvStil_heading"
+        android:gravity="center_horizontal"
+        android:text="@string/tvAusgabeEins"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSparbetrag"
+        style="@style/tvStil"
+        android:layout_marginTop="16dp"
+        android:text="@string/tvSparbetrag"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEins" />
+
+    <EditText
+        android:id="@+id/inpSparbetrag"
+        android:hint="500"
+        style="@style/inpStil"
+        android:background="@color/Background"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/tvEins"
+        app:layout_constraintLeft_toRightOf="@id/tvSparbetrag" />
+    <TextView
+        android:id="@+id/tvEuro1"
+        style="@style/tvStil"
+        android:layout_marginTop="16dp"
+        android:text="@string/tvEuro"
+        app:layout_constraintLeft_toRightOf="@id/inpSparbetrag"
+        app:layout_constraintTop_toBottomOf="@id/tvEins" />
+
+
+    <SeekBar
+        android:id="@+id/sBSparbetrag"
+        style="@style/sbStil"
+        android:layout_width="0dp"
+        android:min="1"
+        app:layout_constraintTop_toBottomOf="@id/tvSparbetrag"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDepotwert"
+        style="@style/tvStil"
+        android:layout_marginTop="16dp"
+        android:text="@string/tvDepotwert"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sBSparbetrag" />
+
+    <EditText
+        android:id="@+id/inpDepotwert"
+        style="@style/inpStil"
+        android:layout_marginTop="16dp"
+        android:background="@color/Background"
+        android:hint="2000"
+        android:inputType="numberDecimal"
+        app:layout_constraintLeft_toRightOf="@id/tvDepotwert"
+        app:layout_constraintTop_toBottomOf="@id/sBSparbetrag" />
+    <TextView
+        android:id="@+id/tvEuro2"
+        style="@style/tvStil"
+        android:layout_marginTop="16dp"
+        android:text="@string/tvEuro"
+        app:layout_constraintLeft_toRightOf="@id/inpDepotwert"
+        app:layout_constraintTop_toBottomOf="@id/sBSparbetrag" />
+    <SeekBar
+        android:id="@+id/sBDepotwert"
+        style="@style/sbStil"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvDepotwert"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAusgaben"
+        style="@style/tvStil"
+        android:layout_marginTop="16dp"
+        android:text="@string/tvAusgaben"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sBDepotwert" />
+
+    <EditText
+        android:id="@+id/inpAusgaben"
+        style="@style/inpStil"
+        android:layout_marginTop="16dp"
+        android:background="@color/Background"
+        android:hint="2000"
+        android:inputType="numberDecimal"
+        app:layout_constraintLeft_toRightOf="@id/tvAusgaben"
+        app:layout_constraintTop_toBottomOf="@id/sBDepotwert" />
+    <TextView
+        android:id="@+id/tvEuro3"
+        style="@style/tvStil"
+        android:layout_marginTop="16dp"
+        android:text="@string/tvEuro"
+        app:layout_constraintLeft_toRightOf="@id/inpAusgaben"
+        app:layout_constraintTop_toBottomOf="@id/sBDepotwert" />
+    <SeekBar
+        android:id="@+id/sBAusgaben"
+        style="@style/sbStil"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvAusgaben"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAbgeltungssteuer"
+        style="@style/tvStil"
+        android:layout_marginTop="16dp"
+        android:text="@string/tvAbgeltungssteuer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sBAusgaben" />
+
+    <EditText
+        android:id="@+id/inpAbgeltungssteuer"
+        style="@style/inpStil"
+        android:layout_marginTop="16dp"
+        android:background="@color/Background"
+        android:hint="26.00"
+        android:inputType="numberDecimal"
+        app:layout_constraintLeft_toRightOf="@id/tvAbgeltungssteuer"
+        app:layout_constraintTop_toBottomOf="@id/sBAusgaben" />
+    <TextView
+        android:id="@+id/tvProzent1"
+        style="@style/tvStil"
+        android:layout_marginTop="16dp"
+        android:text="@string/tvProzent"
+        app:layout_constraintLeft_toRightOf="@id/inpAbgeltungssteuer"
+        app:layout_constraintTop_toBottomOf="@id/sBAusgaben" />
+    <SeekBar
+        android:id="@+id/sBAbgeltungssteuer"
+        style="@style/sbStil"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvAbgeltungssteuer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <Switch
+        android:id="@+id/sw_abgeltungssteuer_flag"
+        android:text="@string/tvAbgeltungssteuer_flag"
+        android:checked="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        style="@style/tvStil"
+        app:layout_constraintTop_toBottomOf="@id/sBAbgeltungssteuer" />
+    <TextView
+        android:id="@+id/tvFlag"
+        style="@style/tvStil"
+        android:layout_marginTop="16dp"
+        android:text="@string/tvFlag"
+        app:layout_constraintLeft_toRightOf="@id/sw_abgeltungssteuer_flag"
+        app:layout_constraintTop_toBottomOf="@id/sBAbgeltungssteuer" />
+
+    <TextView
+        android:id="@+id/tvZinssatz"
+        style="@style/tvStil"
+        android:layout_marginTop="16dp"
+        android:text="@string/tvZinssatz"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sw_abgeltungssteuer_flag" />
+
+    <EditText
+        android:id="@+id/inpZinssatz"
+        style="@style/inpStil"
+        android:layout_marginTop="16dp"
+        android:background="@color/Background"
+        android:hint="4.00"
+        android:inputType="numberDecimal"
+        app:layout_constraintLeft_toRightOf="@id/tvZinssatz"
+        app:layout_constraintTop_toBottomOf="@id/sw_abgeltungssteuer_flag" />
+    <TextView
+        android:id="@+id/tvProzent2"
+        style="@style/tvStil"
+        android:layout_marginTop="16dp"
+        android:text="@string/tvProzent"
+        app:layout_constraintLeft_toRightOf="@id/inpZinssatz"
+        app:layout_constraintTop_toBottomOf="@id/sw_abgeltungssteuer_flag" />
+    <SeekBar
+        android:id="@+id/sBZinssatz"
+        style="@style/sbStil"
+        android:layout_width="0dp"
+        android:min="1"
+        app:layout_constraintTop_toBottomOf="@id/tvZinssatz"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <!--    <Button
+            android:id="@+id/buCalc"
+            style="@style/buStil"
+            android:text="@string/buCalc"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sBZinssatz" />-->
+
+    <TextView
+        android:id="@+id/tvZwei"
+        style="@style/tvInvisible"
+        android:text="@string/tvAusgabeZwei"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sBZinssatz"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/tvRentenbeginn"
+        style="@style/tvInvisible"
+        android:text="@string/tvRentenbeginn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvZwei" />
+
+    <TextView
+        android:id="@+id/tvRentenbeginnResult"
+        style="@style/tvInvisible"
+        android:text="@string/tvRentenbeginnResult"
+        app:layout_constraintLeft_toRightOf="@id/tvRentenbeginn"
+        app:layout_constraintTop_toBottomOf="@id/tvZwei" />
+
+    <TextView
+        android:id="@+id/tvEndkapital"
+        style="@style/tvInvisible"
+        android:text="@string/tvEndkapital"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRentenbeginn" />
+
+    <TextView
+        android:id="@+id/tvEndkapitalResult"
+        style="@style/tvInvisible"
+        android:text="@string/tvEndkapitalResult"
+        app:layout_constraintLeft_toRightOf="@id/tvEndkapital"
+        app:layout_constraintTop_toBottomOf="@id/tvRentenbeginn" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

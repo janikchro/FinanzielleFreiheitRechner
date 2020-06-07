@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/navigation_mit"
+        android:icon="@drawable/baseline_trending_down_black_18dp"
+        android:title="mit Kapitalverzehr"/>
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home"/>
+
+    <item
+        android:id="@+id/navigation_ohne"
+        android:icon="@drawable/baseline_trending_flat_black_18dp"
+        android:title="ewige Auszahlung"/>
+
+</menu>
