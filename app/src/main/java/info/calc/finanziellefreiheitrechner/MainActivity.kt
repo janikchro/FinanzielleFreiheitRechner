@@ -42,15 +42,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         nav_view.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         nav_view.selectedItemId =
-            R.id.navigation_home;
+            R.id.navigation_home
 
         MobileAds.initialize(this) {}
         mAdView = findViewById(R.id.adView)
         val adRequest = AdRequest.Builder().build()
         mAdView.loadAd(adRequest)
-
-           mInterstitialAd = InterstitialAd(this)
-       mInterstitialAd.adUnitId = "ca-app-pub-4473032816994536/4446572663"
+        mInterstitialAd = InterstitialAd(this)
+        mInterstitialAd.adUnitId = "ca-app-pub-4473032816994536/4446572663"
         //Sample ID mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712"
 
         mInterstitialAd.loadAd(AdRequest.Builder().build())
@@ -58,8 +57,6 @@ class MainActivity : AppCompatActivity() {
             override fun onAdLoaded() {
                 if (mInterstitialAd.isLoaded) {
                     mInterstitialAd.show()
-                } else {
-                    //Log.d("TAG", "The interstitial wasn't loaded yet.")
                 }
             }
         }

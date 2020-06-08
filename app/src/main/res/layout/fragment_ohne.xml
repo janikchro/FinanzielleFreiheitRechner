@@ -24,20 +24,20 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvEins" />
 
-    <EditText
+<!--    <EditText
         android:id="@+id/inpSparbetrag"
         android:hint="500"
         style="@style/inpStil"
         android:background="@color/Background"
         android:inputType="numberDecimal"
         app:layout_constraintTop_toBottomOf="@id/tvEins"
-        app:layout_constraintLeft_toRightOf="@id/tvSparbetrag" />
+        app:layout_constraintLeft_toRightOf="@id/tvSparbetrag" />-->
     <TextView
         android:id="@+id/tvEuro1"
         style="@style/tvStil"
         android:layout_marginTop="16dp"
         android:text="@string/tvEuro"
-        app:layout_constraintLeft_toRightOf="@id/inpSparbetrag"
+        app:layout_constraintLeft_toRightOf="@id/tvSparbetrag"
         app:layout_constraintTop_toBottomOf="@id/tvEins" />
 
 
@@ -58,7 +58,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sBSparbetrag" />
 
-    <EditText
+<!--    <EditText
         android:id="@+id/inpDepotwert"
         style="@style/inpStil"
         android:layout_marginTop="16dp"
@@ -66,13 +66,13 @@
         android:hint="2000"
         android:inputType="numberDecimal"
         app:layout_constraintLeft_toRightOf="@id/tvDepotwert"
-        app:layout_constraintTop_toBottomOf="@id/sBSparbetrag" />
+        app:layout_constraintTop_toBottomOf="@id/sBSparbetrag" />-->
     <TextView
         android:id="@+id/tvEuro2"
         style="@style/tvStil"
         android:layout_marginTop="16dp"
         android:text="@string/tvEuro"
-        app:layout_constraintLeft_toRightOf="@id/inpDepotwert"
+        app:layout_constraintLeft_toRightOf="@id/tvDepotwert"
         app:layout_constraintTop_toBottomOf="@id/sBSparbetrag" />
     <SeekBar
         android:id="@+id/sBDepotwert"
@@ -90,7 +90,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sBDepotwert" />
 
-    <EditText
+<!--    <EditText
         android:id="@+id/inpAusgaben"
         style="@style/inpStil"
         android:layout_marginTop="16dp"
@@ -98,13 +98,13 @@
         android:hint="2000"
         android:inputType="numberDecimal"
         app:layout_constraintLeft_toRightOf="@id/tvAusgaben"
-        app:layout_constraintTop_toBottomOf="@id/sBDepotwert" />
+        app:layout_constraintTop_toBottomOf="@id/sBDepotwert" />-->
     <TextView
         android:id="@+id/tvEuro3"
         style="@style/tvStil"
         android:layout_marginTop="16dp"
         android:text="@string/tvEuro"
-        app:layout_constraintLeft_toRightOf="@id/inpAusgaben"
+        app:layout_constraintLeft_toRightOf="@id/tvAusgaben"
         app:layout_constraintTop_toBottomOf="@id/sBDepotwert" />
     <SeekBar
         android:id="@+id/sBAusgaben"
@@ -122,7 +122,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sBAusgaben" />
 
-    <EditText
+<!--    <EditText
         android:id="@+id/inpAbgeltungssteuer"
         style="@style/inpStil"
         android:layout_marginTop="16dp"
@@ -130,13 +130,13 @@
         android:hint="26.00"
         android:inputType="numberDecimal"
         app:layout_constraintLeft_toRightOf="@id/tvAbgeltungssteuer"
-        app:layout_constraintTop_toBottomOf="@id/sBAusgaben" />
+        app:layout_constraintTop_toBottomOf="@id/sBAusgaben" />-->
     <TextView
         android:id="@+id/tvProzent1"
         style="@style/tvStil"
         android:layout_marginTop="16dp"
         android:text="@string/tvProzent"
-        app:layout_constraintLeft_toRightOf="@id/inpAbgeltungssteuer"
+        app:layout_constraintLeft_toRightOf="@id/tvAbgeltungssteuer"
         app:layout_constraintTop_toBottomOf="@id/sBAusgaben" />
     <SeekBar
         android:id="@+id/sBAbgeltungssteuer"
@@ -170,7 +170,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sw_abgeltungssteuer_flag" />
 
-    <EditText
+<!--    <EditText
         android:id="@+id/inpZinssatz"
         style="@style/inpStil"
         android:layout_marginTop="16dp"
@@ -178,13 +178,13 @@
         android:hint="4.00"
         android:inputType="numberDecimal"
         app:layout_constraintLeft_toRightOf="@id/tvZinssatz"
-        app:layout_constraintTop_toBottomOf="@id/sw_abgeltungssteuer_flag" />
+        app:layout_constraintTop_toBottomOf="@id/sw_abgeltungssteuer_flag" />-->
     <TextView
         android:id="@+id/tvProzent2"
         style="@style/tvStil"
         android:layout_marginTop="16dp"
         android:text="@string/tvProzent"
-        app:layout_constraintLeft_toRightOf="@id/inpZinssatz"
+        app:layout_constraintLeft_toRightOf="@id/tvZinssatz"
         app:layout_constraintTop_toBottomOf="@id/sw_abgeltungssteuer_flag" />
     <SeekBar
         android:id="@+id/sBZinssatz"
