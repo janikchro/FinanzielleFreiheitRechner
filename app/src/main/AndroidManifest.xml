@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.calc.finanziellefreiheitrechner">
+    package="info.calc.finanziellefreiheitrechner">
     <uses-permission android:name="none">
     </uses-permission>
     <permission android:name="none"
@@ -17,7 +17,14 @@
         android:supportsRtl="true"
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme">
-    <activity android:name="info.calc.finanziellefreiheitrechner.MainActivity">
+        <activity android:name=".SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    <activity android:name=".MainActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />

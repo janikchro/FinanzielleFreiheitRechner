@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.calc.finanziellefreiheitrechner.R
 import com.google.android.gms.ads.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 

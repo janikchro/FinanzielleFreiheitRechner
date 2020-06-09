@@ -10,7 +10,6 @@ import android.widget.EditText
 import android.widget.SeekBar
 import android.widget.Switch
 import androidx.fragment.app.Fragment
-import com.calc.finanziellefreiheitrechner.R
 import kotlinx.android.synthetic.main.fragment_mit.*
 import kotlinx.android.synthetic.main.fragment_ohne.*
 import kotlin.math.round
