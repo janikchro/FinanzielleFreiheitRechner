@@ -9,6 +9,7 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.InterstitialAd
 
+/*
 class SplashActivity : AppCompatActivity() {
 
     // This is the loading time of the splash screen
@@ -28,5 +29,30 @@ class SplashActivity : AppCompatActivity() {
             finish()
 
         }, timeout)
+    }
+}*/
+
+import androidx.core.os.postDelayed
+import java.util.*
+import kotlin.concurrent.schedule
+
+class SplashActivity : AppCompatActivity() {
+
+    var timer = Timer()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_splash)
+
+        timer.schedule(3000) {
+            var intent = Intent(this@SplashActivity, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+    }
+
+    override fun onPause() {
+        timer.cancel()
+        super.onPause()
     }
 }
