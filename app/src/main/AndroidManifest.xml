@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.calc.finanziellefreiheitrechner">
+    package="info.calc.finanziellefreiheitrechner">
     <uses-permission android:name="none">
     </uses-permission>
     <permission android:name="none"
@@ -11,18 +11,25 @@
 
     <application
         android:allowBackup="false"
-        android:icon="@mipmap/icon"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme">
-    <activity android:name="info.calc.finanziellefreiheitrechner.MainActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
+        <activity android:name=".SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+               <!-- <category android:name="android.intent.category.LAUNCHER" />-->
+            </intent-filter>
+        </activity>
         <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
         <!-- Own AdMoB App IDD: ca-app-pub-4473032816994536~3065911530 -->
         <meta-data
