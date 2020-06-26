@@ -22,6 +22,9 @@ class ohneFragment : Fragment(), SeekBar.OnSeekBarChangeListener {
     var Step_Steuer=0.25
     var MAX_Zins = 20
     var Step_Zins=0.25
+    var Step_Sparbetrag = 100
+    var Step_Depot = 1000
+    var Step_Ausgaben = 100
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,14 +38,16 @@ class ohneFragment : Fragment(), SeekBar.OnSeekBarChangeListener {
         val seekBarZinssatz: SeekBar? = view?.findViewById(R.id.sBZinssatz)
         val seekBarAbgeltungssteuer: SeekBar? = view?.findViewById(R.id.sBAbgeltungssteuer)
         val seekBarAusgaben: SeekBar? = view?.findViewById(R.id.sBAusgaben)
-        seekBarSparbetrag!!.max = MAX_Sparbetrag
-        seekBarAusgaben!!.max = MAX_Ausgaben
-        seekBarAusgaben.progress = 2500
-        seekBarDepotwert!!.max = MAX_Depot
+        seekBarSparbetrag!!.max = (MAX_Sparbetrag/Step_Sparbetrag)
+        seekBarSparbetrag.progress=1000/Step_Sparbetrag
+        seekBarAusgaben!!.max = (MAX_Ausgaben/Step_Ausgaben)
+        seekBarAusgaben.progress = 2500/Step_Ausgaben
+        seekBarDepotwert!!.max = (MAX_Depot/Step_Depot)
+        seekBarDepotwert.progress=10000/Step_Depot
         seekBarAbgeltungssteuer!!.max = (MAX_Steuer/Step_Steuer).toInt()
         seekBarZinssatz!!.max = (MAX_Zins/Step_Zins).toInt()
-        seekBarAbgeltungssteuer.progress = 26
-        seekBarZinssatz.progress = 4
+        seekBarAbgeltungssteuer.progress = (26/Step_Steuer).toInt()
+        seekBarZinssatz.progress = (4/Step_Zins).toInt()
 
         seekBarDepotwert.setOnSeekBarChangeListener(this)
         seekBarAbgeltungssteuer.setOnSeekBarChangeListener(this)
@@ -55,11 +60,11 @@ class ohneFragment : Fragment(), SeekBar.OnSeekBarChangeListener {
 
     override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
 
-        val sparbetrag = sBSparbetrag.progress
+        val sparbetrag = sBSparbetrag.progress*Step_Sparbetrag
         val prozentsatz = sBZinssatz.progress*Step_Zins
         val steuer = sBAbgeltungssteuer.progress*Step_Steuer
-        val ausgaben = sBAusgaben.progress
-        val depotwert = sBDepotwert.progress
+        val ausgaben = sBAusgaben.progress*Step_Ausgaben
+        val depotwert = sBDepotwert.progress*Step_Depot
 
         tvSparbetrag.text = "mtl. Sparbetrag: %d".format(sparbetrag)
         tvAbgeltungssteuer.text = "Abgeltungssteuersatz: %.2f".format(steuer)
@@ -73,14 +78,14 @@ class ohneFragment : Fragment(), SeekBar.OnSeekBarChangeListener {
             if (sw_abgeltungssteuer_flag.isChecked) {
                 sw_abgeltungssteuer_flag!!.isChecked = true
                 sw_abgeltungssteuer_flag!!.text = "Fälligkeit: "
-                sBSparbetrag.progress=200
-                sBSparbetrag.progress=sparbetrag
+                sBSparbetrag.progress=sparbetrag/2/Step_Sparbetrag
+                sBSparbetrag.progress=sparbetrag/Step_Sparbetrag
                 tvFlag.text = "jährlich"
             } else {
                 sw_abgeltungssteuer_flag.isChecked = false
                 sw_abgeltungssteuer_flag!!.text = "Fälligkeit: "
-                sBSparbetrag.progress=200
-                sBSparbetrag.progress=sparbetrag
+                sBSparbetrag.progress=sparbetrag/2/Step_Sparbetrag
+                sBSparbetrag.progress=sparbetrag/Step_Sparbetrag
                 tvFlag.text = "bei Auszahlung"
             }
         }
