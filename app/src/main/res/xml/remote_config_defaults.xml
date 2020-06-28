@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- START xml_defaults -->
+<defaultsMap>
+    <entry>
+        <key>finanzielle_freiheit_text</key>
+        <value>Hallo</value>
+    </entry>
+</defaultsMap>
+    <!-- END xml_defaults -->

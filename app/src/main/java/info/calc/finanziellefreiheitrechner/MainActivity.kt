@@ -7,10 +7,15 @@ import kotlinx.android.synthetic.main.activity_main.*
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.google.android.gms.ads.*
+import com.google.android.gms.dynamite.DynamiteModule
 import com.google.android.material.bottomnavigation.BottomNavigationView
-
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.remoteconfig.FirebaseRemoteConfig
+import com.google.firebase.remoteconfig.ktx.get
+import com.google.firebase.remoteconfig.ktx.remoteConfig
+import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
 class MainActivity : AppCompatActivity() {
-
+    private lateinit var remoteConfig: FirebaseRemoteConfig
     private val mOnNavigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
@@ -36,6 +41,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var mAdView: AdView
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -59,10 +65,22 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+        remoteConfig = Firebase.remoteConfig
+        val configSettings = remoteConfigSettings {
+            minimumFetchIntervalInSeconds = 3600
+        }
+        remoteConfig.setDefaultsAsync(R.xml.remote_config_defaults)
+        fetchText()
+
         replaceFragment(HomeFragment())
 
 
     }
+    private fun fetchText(){
+        binding.textView.text = remoteConfig[finanzielle_freiheit_text].asString()
+        
+    }
+
 
     private fun replaceFragment(fragment: Fragment){
         val fragmentTransaction = supportFragmentManager.beginTransaction()
