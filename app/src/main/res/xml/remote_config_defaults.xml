@@ -2,8 +2,12 @@
 <!-- START xml_defaults -->
 <defaultsMap>
     <entry>
-        <key>finanzielle_freiheit_text</key>
+        <key>finanzielle_freiheit_main_text</key>
         <value>Hallo</value>
+    </entry>
+    <entry>
+        <key>primary_colour</key>
+        <value>#20af86</value>
     </entry>
 </defaultsMap>
     <!-- END xml_defaults -->

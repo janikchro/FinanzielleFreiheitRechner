@@ -1,21 +1,33 @@
 package info.calc.finanziellefreiheitrechner
 
 
+import android.graphics.Color
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.gms.ads.*
-import com.google.android.gms.dynamite.DynamiteModule
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.ktx.get
 import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_home.*
+import java.lang.reflect.Array.newInstance
+import javax.xml.datatype.DatatypeFactory.newInstance
+
+
 class MainActivity : AppCompatActivity() {
     private lateinit var remoteConfig: FirebaseRemoteConfig
+   private val FINANZIELLE_FREIHEIT_MAIN_TEXT_KEY = "finanzielle_freiheit_main_text"
+    private val PRIMARY_COLOUR_KEY = "primary_colour"
     private val mOnNavigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
@@ -41,7 +53,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var mAdView: AdView
 
 
-
+    private var root: View? = null   // create a global variable which will hold your layout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -65,20 +77,35 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
         remoteConfig = Firebase.remoteConfig
         val configSettings = remoteConfigSettings {
             minimumFetchIntervalInSeconds = 3600
         }
+        remoteConfig.setConfigSettingsAsync(configSettings)
         remoteConfig.setDefaultsAsync(R.xml.remote_config_defaults)
         fetchText()
 
         replaceFragment(HomeFragment())
 
-
     }
-    private fun fetchText(){
-        binding.textView.text = remoteConfig[finanzielle_freiheit_text].asString()
-        
+
+    private fun fetchText() {
+       var firebase_val = remoteConfig[FINANZIELLE_FREIHEIT_MAIN_TEXT_KEY].asString()
+        var firebase_primary_colour=remoteConfig[PRIMARY_COLOUR_KEY].asString()
+
+        // [START fetch_config_with_callback]
+        remoteConfig.fetchAndActivate()
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(this, "Fetch and Activate sucessfull",
+                        Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Fetch failed",
+                        Toast.LENGTH_SHORT).show()
+                }
+            }
+        // [END fetch_config_with_callback]
     }
 
 
