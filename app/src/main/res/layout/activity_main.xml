@@ -19,7 +19,7 @@
         android:foregroundGravity="top"
         android:visibility="visible"
         app:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-4473032816994536/1465186101"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
         android:background="?android:attr/windowBackground"
         app:layout_constraintBottom_toTopOf="@id/nav_view"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -41,3 +41,4 @@
 </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!--    Correct ID    app:adUnitId="ca-app-pub-4473032816994536/1465186101"-->
+    <!--    Sample  ID    ca-app-pub-3940256099942544/6300978111-->

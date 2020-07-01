@@ -6,6 +6,8 @@
     <color name="textColor">#000000</color>
     <color name="Background">#E6E6E6</color>
     <color name="Info">#20af86</color>
+    <color name="red">#F44336</color>
+    <color name="yellow">#FFEB3B</color>
     <color name="cardview_dark_background">#ffffff</color>
 
 </resources>

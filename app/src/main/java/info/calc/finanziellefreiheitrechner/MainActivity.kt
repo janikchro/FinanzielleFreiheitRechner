@@ -48,8 +48,10 @@ class MainActivity : AppCompatActivity() {
         val adRequest = AdRequest.Builder().build()
         mAdView.loadAd(adRequest)
         mInterstitialAd = InterstitialAd(this)
-        mInterstitialAd.adUnitId = "ca-app-pub-4473032816994536/4446572663"
+        mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712"
         //Sample ID mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712"
+        //   Own ID mInterstitialAd.adUnitId = "ca-app-pub-4473032816994536/4446572663"
+
 
         mInterstitialAd.loadAd(AdRequest.Builder().build())
         mInterstitialAd.adListener = object: AdListener() {
